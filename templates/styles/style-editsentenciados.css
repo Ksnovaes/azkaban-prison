@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    text-align: center;
+    position: relative;
+    background-color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+header .header-img {
+    width: 100%;
+}
+
+.headline {
+    position: absolute;
+    top: 31.5%;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.headline img {
+    width: 1110px;
+    height: 444px;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: .9;
+}
+
+.find {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(177, 170, 127, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: rgb(34, 34, 34);
+}
+
+.find-update input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.options {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box; 
+}
+
+.judge-update {
+    background-color: rgb(237, 225, 210);
+    width: 40%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #666666;
+    margin: 5px 0;
+    transition: .8s;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.judge-update:hover {
+    background-color: rgb(34, 34, 34);
+    color: rgb(237, 225, 210);
+}

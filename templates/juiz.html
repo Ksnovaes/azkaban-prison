@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juiz em Azkaban</title>
+    <link rel="web icon" href="/assets/log2.png">
+    <link rel="stylesheet" href="./styles/style-juiz.css">
+</head>
+{% extends 'index.html' %}
+{% block content %}
+<body>
+    <header>
+        <img class="header-img" src="./assets/profeta-diario-2.jpg" alt="">
+    </header>
+    <div class="headline">
+        <img src="./assets/azkaban.gif" alt="GIF">
+    </div>
+    <form action="/addjuiz" method="post" class="find">
+        <h2>Juiz(a) de Azkaban</h2>
+        <h3>Nome completo</h3>
+        <input type="text" name="full_name" placeholder="Nome do juiz">
+        <button class="register" type="submit">Cadastrar</button>
+    </form>
+</body>
+{% endblock content %}
+</html>

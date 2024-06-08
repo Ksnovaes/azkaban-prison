@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de sentenciados</title>
+    <link rel="stylesheet" href="./styles/style.sentenciados.css">
+</head>
+{% extends 'index.html' %}
+{% block content %}
+<body>
+    {% for st in sentenciados %}
+    <div class="container">
+        <div class="sentenciados">
+            <h3>{{ st.name }}</h3>
+            <p>{{ st.felony }}</p>
+            <p>{{ st.sentence.name }}</p>
+            <a href="edit/{{ st.id }}">Editar sentença</a> | <a href="delete/{{ st.id }}">Remover sentença</a>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+{% endblock content %}
+</html>

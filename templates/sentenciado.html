@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentenciar em Azkaban</title>
+    <link rel="web icon" href="/assets/log2.png">
+    <link rel="stylesheet" href="./styles/style-base.css">
+</head>
+{% extends 'index.html' %}
+{% block content %}
+<body>
+    <header>
+        <img class="header-img" src="./assets/profeta-diario-2.jpg" alt="">
+    </header>
+    <div class="headline">
+        <img src="./assets/azkaban.gif" alt="GIF">
+    </div>
+    <form class="find" action="/addsentenciado" method="post">
+        <h2>Prisioneiro(a) de Azkaban</h2>
+        <h3>Nome</h3>
+        <input type="text" name="name" placeholder="Nome do sentenciado">
+        <h3>Crime</h3>
+        <input type="text" name="felony" placeholder="Crime do sentenciado">
+        <h3>Sentença</h3>
+        <select name="sentence" class="options">
+            <option value=""></option>
+            <option value="prison">Prisão</option>
+            <option value="death">Pena de morte</option>
+            <option value="life_imprisonment">Prisão perpétua</option>
+        </select>
+        <button class="judge" type="submit">Julgar</button>
+    </form>
+</body>
+{% endblock content %}
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Sentenciado</title>
+    <link rel="web icon" href="/assets/log2.png">
+    <link rel="stylesheet" href="./styles/style-editsentenciados.css">
+</head>
+{% extends 'index.html' %}
+{% block content %}
+<body>
+    <header>
+        <img class="header-img" src="assets/profeta-diario-2.jpg" alt="">
+    </header>
+    <div class="headline">
+        <img src="assets/azkaban.gif" alt="GIF">
+    </div>
+    <form class="find-update" action="/update/{{ sentenciado.id }}" method="post">
+        <h2>Editar Prisioneiro(a) de Azkaban</h2>
+        <h3>Nome</h3>
+        <input type="text" name="name" placeholder="Nome do sentenciado" value="{{ sentenciado.name }}">
+        <h3>Crime</h3>
+        <input type="text" name="felony" placeholder="Crime do sentenciado" value="{{ sentenciado.felony }}">
+        <h3>Sentença</h3>
+        <select name="sentence" class="options" value="{{ sentenciado.sentence }}">
+            <option value=""></option>
+            <option value="prison">Prisão</option>
+            <option value="death">Pena de morte</option>
+            <option value="life_imprisonment">Prisão perpétua</option>
+        </select>
+        <button class="judge-update" value="update" type="submit">Atualizar</button>
+    </form>
+</body>
+{% endblock content %}
+</html>
