@@ -4,9 +4,12 @@
     display: flex;
     flex-direction: column;
     background-color: #202024;
-    padding: 2rem;
+    width: 25.5%;
+    padding: 10px;
+    border-radius: 2px;
 }
 
 .sentenciados {
     background-color: #c4c4cc;
+    border-radius: 2px;
 }
