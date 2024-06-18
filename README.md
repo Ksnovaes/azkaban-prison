@@ -1,5 +1,6 @@
 # Projeto Final - Programação Web
 Esse repositório contém uma aplicação fullstack voltada para um projeto de faculdade, é um projeto básico contendo um CRUD.
+Você pode acessar o vídeo demonstrativo clicando [aqui](https://www.youtube.com/watch?v=dbYhwjS_il4)
 
 ## Tecnologias utilizadas
 - **PostgreSQL:** banco de dados relacional flexível e eficiente
