@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request, Form, Depends, HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 from starlette.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from db.database import engine, SessionLocal
@@ -13,6 +14,14 @@ models.Base.metadata.create_all(bind=engine)
 templates = Jinja2Templates(directory="templates")
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.mount("/styles", StaticFiles(directory="./templates/styles"), name="styles")
 app.mount("/assets", StaticFiles(directory="./templates/assets"), name="assets")
